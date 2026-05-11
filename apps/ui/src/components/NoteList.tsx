@@ -54,10 +54,11 @@ export default function NoteList({ onEdit }: NoteListProps) {
         </div>
       </div>
     );
-  }  
+  } 
+
   return (
     <div className="notes-grid" id="notes-list">
-      {getNotes.data.map((note) => (
+      {getNotes.data.map((note:any) => (
         <NoteCard key={note._id} note={note} onEdit={onEdit} />
       ))}
     </div>
