@@ -24,13 +24,6 @@ env:
 # ═══════════════════════════════════════════════
 jobs:
 
-  # ─────────────────────────────────────────────
-  # Job 1: Quality Checks (runs on every push & PR)
-  # ─────────────────────────────────────────────
-  quality:
-    name: "Lint & Type Check"
-    runs-on: ubuntu-latest        # Use Ubuntu VM (free, fast)
-
     steps:
       # 1. Download your code to the runner
       - name: Checkout code
