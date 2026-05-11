@@ -1,0 +1,29 @@
+{
+  "name": "notify",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "add:api":"pnpm --filter api add",
+    "add:ui":"pnpm --filter ui add",
+    "add:esconfig":"pnpm --filter esconfig add",
+    "add:tsconfig": "pnpm --filter tsconfig add",
+    "add:crud":"pnpm --filter crud add",
+    "add:auth":"pnpm --filter auth add",
+    "deploy:prod":"pnpm sst deploy --stage production",
+    "destroy:prod":"pnpm sst destroy --stage production"
+
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.9",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

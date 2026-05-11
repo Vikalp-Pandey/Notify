@@ -1,0 +1,9 @@
+{
+  "name": "@repo/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "files": ["base.json", "library.json", "node.json", "vite.json"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
