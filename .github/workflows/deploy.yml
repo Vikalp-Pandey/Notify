@@ -96,7 +96,7 @@ jobs:
 
       # ── OPTION A: Deploy with SST ──
       - name: Deploy API (SST)
-        run: npx sst deploy --stage production
+        run: pnpm deploy:prod
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
