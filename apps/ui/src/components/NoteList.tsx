@@ -56,9 +56,17 @@ export default function NoteList({ onEdit }: NoteListProps) {
     );
   } 
 
+  interface Note {
+  _id: string;
+  title: string;
+  content: string
+  createdAt: string;
+  updatedAt: string;
+}
+
   return (
     <div className="notes-grid" id="notes-list">
-      {getNotes.data.map((note:any) => (
+      {getNotes.data.map((note:Note) => (
         <NoteCard key={note._id} note={note} onEdit={onEdit} />
       ))}
     </div>
