@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  # ── JOB 1: QUALITY CHECK ──────────────────────────────────────
+
   quality:
     name: "Lint & Type Check"
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
       - name: Type check
         run: pnpm run check-types
 
-  # ── JOB 2: DEPLOY BACKEND ─────────────────────────────────────
+
   deploy-backend:
     name: "Deploy API to Lambda"
     runs-on: ubuntu-latest
@@ -70,7 +70,6 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           ALLOWED_ORIGINS: ${{ secrets.ALLOWED_ORIGINS }}
 
-  # ── JOB 3: DEPLOY FRONTEND ────────────────────────────────────
   deploy-frontend:
     name: "Deploy UI to CloudFront"
     runs-on: ubuntu-latest
