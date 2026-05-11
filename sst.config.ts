@@ -9,12 +9,12 @@ export default $config({
   },
   async run() {
   
-    const api = new sst.aws.Function("Notify", {
+    const api = new sst.aws.Function("Notify-api", {
       handler: "apps/api/src/lambda.ts",
       url: true,
     });
 
-    new sst.aws.StaticSite("Notify", {
+    new sst.aws.StaticSite("Notify-ui", {
       path: "apps/ui",
       build: {
         command: "pnpm run build",
